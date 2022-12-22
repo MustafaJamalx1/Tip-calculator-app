@@ -46,9 +46,7 @@ document.querySelector(".input-bill").addEventListener("input", () => {
 /////////////calculating and displaying function
 const calculation = function () {
   if (billValue > 0 && interest >= 0 && peopleNum > 0) {
-    document
-      .querySelectorAll(".input-container")
-      .forEach((c) => c.classList.add("active-outline"));
+
     if (interest > 0) {
       const resultAmount =
         Math.round(((billValue + interest * billValue) / peopleNum) * 100) /
@@ -62,7 +60,7 @@ const calculation = function () {
       total.textContent = resultAmount;
 
       tip.textContent = 0;
-      console.log("im");
+     
     }
   }
 };

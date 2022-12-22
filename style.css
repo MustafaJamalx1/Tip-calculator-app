@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 45.5%;
+}
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 128rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.main-logo {
+  height: 5rem;
+}
+.bill-calc {
+  max-width: 80rem;
+  max-height: 55vh;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 3rem;
+  padding: 3rem;
+  display: flex;
+  gap: 4rem;
+}
+
+/* 
+select-part */
+
+.select-bill {
+  width: 50%;
+}
+.select-title {
+  font-size: 1.6rem;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 1rem;
+}
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 2.4rem;
+  border-radius: 1rem;
+  background-color: hsl(189, 41%, 97%);
+  margin-bottom: 3rem;
+}
+.input {
+  font-weight: bolder;
+  color: hsl(183, 100%, 15%);
+  font-size: 2.4rem;
+  height: 4rem;
+  border: none;
+  background: none;
+  width: auto;
+  direction: rtl;
+}
+.input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.interests-container {
+  gap: 1rem;
+  display: grid;
+  height: 10rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 5rem;
+}
+.btn {
+  font-size: 2.4rem;
+  color: hsl(189, 41%, 97%);
+  border: none;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 0.6rem;
+}
+.btn-active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.btn:hover {
+  background-color: hsl(172, 100%, 45%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+}
+.input-interest {
+  width: 100%;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  border-radius: 0.6rem;
+  font-size: 2.4rem;
+  font-weight: bolder;
+  text-align: center;
+}
+.input-interest:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* display part */
+.display-bill {
+  padding: 3rem;
+  background-color: hsl(183, 100%, 15%);
+  width: 50%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.display-results {
+  color: hsl(189, 41%, 97%);
+  width: 100%;
+  height: 6rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.display-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+.display-p {
+  font-size: 1.4rem;
+  color: hsl(184, 14%, 56%);
+}
+.result {
+  color: hsl(172, 67%, 45%);
+  font-size: 3rem;
+}
+.reset-btn {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  width: 100%;
+  height: 4rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+/* errors */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.input-error {
+  color: red;
+  font-size: 1.4rem;
+}
+.hidden {
+  display: none;
+}
+
+.error-outline {
+  outline: solid rgb(255, 10, 10) 1px;
+}
+.active-outline {
+  outline: solid green 1px;
+}
+/* 1050px */
+@media (max-width: 65em) {
+  html {
+    font-size: 40%;
+  }
+}
+/* 700px */
+@media (max-width: 44em) {
+  html {
+    font-size: 35%;
+  }
+}
+/* 530px */
+@media (max-width: 33em) {
+  html {
+    font-size: 30%;
+  }
+}
+/* 400px */
+@media (max-width: 33em) {
+  html {
+    font-size: 35%;
+  }
+  .bill-calc {
+    flex-direction: column;
+    max-width: 50rem;
+    max-height: 70vh;
+  }
+  .display-bill {
+    width: 100%;
+  }
+  .select-bill {
+    width: 100%;
+  }
+  .reset-btn {
+    margin-top: 3rem;
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <script src="script.js" defer></script>
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <main class="container">
+      <img class="main-logo" src="images/logo.svg" alt="" />
+      <div class="bill-calc">
+        <div class="select-bill">
+          <div class="flex">
+            <h1 class="select-title">Bill</h1>
+            <h2 class="input-error hidden">Can't be zero</h2>
+          </div>
+          <div class="input-container bill-input-container">
+            <img class="icon-dollar" src="images/icon-dollar.svg" alt="" />
+            <input
+              class="input input-bill"
+              pattern="[0-9] required"
+              title="fuck you"
+            />
+          </div>
+          <h2 class="select-title">Select Tip %</h2>
+          <div class="interests-container">
+            <button class="btn btn-interest">5%</button>
+            <button class="btn btn-interest">10%</button>
+            <button class="btn btn-interest">15%</button>
+            <button class="btn btn-interest">25%</button>
+            <button class="btn btn-interest">50%</button>
+            <input class="input-interest" placeholder="Custom" />
+          </div>
+          <div class="flex">
+            <h2 class="select-title">Number of People</h2>
+            <h2 class="input-error hidden">Can't be zero</h2>
+          </div>
+          <div class="input-container">
+            <img src="images/icon-person.svg" class="icon-dollar" alt="" />
+            <input class="input input-people-num" placeholder="0" required />
+          </div>
+        </div>
+        <div class="display-bill">
+          <div>
+            <div class="display-results">
+              <div>
+                <p class="display-title">Tip Amount</p>
+                <p class="display-p">/ person</p>
+              </div>
+              <p class="result result-tip">00.00</p>
+            </div>
+            <div class="display-results">
+              <div>
+                <p class="display-title">Total</p>
+                <p class="display-p">/ person</p>
+              </div>
+              <p class="result result-total">00.00</p>
+            </div>
+          </div>
+          <button class="btn reset-btn">RESET</button>
+        </div>
+      </div>
+    </main>
+    <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
+    person Total / person Reset -->
+  </body>
+</html>
